@@ -1,5 +1,9 @@
 # MurKir Shield
 
+# Щит MurKir — заблокированные IP
+Пример работы с блокировкой по API
+https://murkir.com/blocked-ips
+
 **Живые логи nginx и автозащита от ботов в реальном времени на чистом PHP: без JS-проверок, без Composer, без Redis.**
 
 > **EN:** Real-time nginx log viewer and auto-ban daemon in plain PHP 8.3. A single-file web panel (`logs.php`) shows live traffic, bots, SEO crawl stats and threats. A systemd daemon (`shield-daemon.php`) applies 15 detection rules within a second and bans IPs through your firewall API. It has no JavaScript challenge, so search engines are never blocked: Googlebot and Bingbot are verified by rDNS and by their official IP ranges.
