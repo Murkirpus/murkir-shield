@@ -2,9 +2,11 @@
 
 ## Щит MurKir — заблокированные IP
 Пример работы с блокировкой по API
+
 https://murkir.com/blocked-ips
 
 Автозащита в реальном времени: демон на PHP 8.3 банит ботов за секунду
+
 https://murkir.com/avtozashchita-v-realnom-vremeni-demon-php-83
 
 **Живые логи nginx и автозащита от ботов в реальном времени на чистом PHP: без JS-проверок, без Composer, без Redis.**
