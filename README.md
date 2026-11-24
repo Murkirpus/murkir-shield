@@ -1,7 +1,7 @@
 # MurKir Shield
 
 ## Щит MurKir — заблокированные IP
-Пример работы с блокировкой по API
+Пример работы murkir-shield и murkir-ipset-api.
 
 https://murkir.com/blocked-ips
 
