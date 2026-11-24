@@ -1,0 +1,26 @@
+[Unit]
+Description=MurKir Shield — потоковая автозащита по логам nginx (logs.php)
+After=network-online.target nginx.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Тот же пользователь, от которого работает PHP-FPM (nginx, www-data…)
+User=nginx
+Group=nginx
+# Чтение логов nginx (обычно группа adm). Если у вас логи читаются иначе — уберите строку.
+SupplementaryGroups=adm
+WorkingDirectory=/var/www/example.com
+ExecStart=/usr/bin/php8.3 /var/www/example.com/shield-daemon.php
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=always
+RestartSec=2
+# SIGTERM только главному процессу: он сохранит состояние и дождётся дочерних («ban», «rdns»)
+KillMode=mixed
+TimeoutStopSec=15
+MemoryMax=128M
+NoNewPrivileges=true
+Nice=-5
+
+[Install]
+WantedBy=multi-user.target
